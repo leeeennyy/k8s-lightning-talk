@@ -7,16 +7,22 @@ Install the following:
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (minikube should install this I think, but if not, install it)
 
 ## Docker
+### Login to docker
+Ensure you have an account in Docker Hub, and login/enter creds.
+```
+docker login
+```
+
 ### Building the image
 Navigate to the API solution and run:
 ```
-docker build -t alenaintergen/k8s-lightning-talk-demo:v1 -f k8s-lightning-talk-demo\Dockerfile .
+docker build -t leeeennyy/k8s-lightning-talk-demo:v1 -f k8s-lightning-talk-demo\Dockerfile .
 ```
 ### Pushing the image
 ```
-docker push alenaintergen/k8s-lightning-talk-demo:v1
+docker push leeeennyy/k8s-lightning-talk-demo:v1
 ```
-You'll need to replace `alenaintergen` with the name of your docker registry if you want to make your own. You can create an account at https://hub.docker.com/.
+You'll need to replace `leeeennyy` with the name of your docker registry if you want to make your own. You can create an account at https://hub.docker.com/.
 
 ## Kubernetes
 To deploy locally, ensure that minikube is started and that kubectl is connected to it.

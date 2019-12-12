@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: k8s-lightning-talk-demo
-        image: docker.io/alenaintergen/k8s-lightning-talk-demo:v1
+        image: docker.io/leeeennyy/k8s-lightning-talk-demo:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
