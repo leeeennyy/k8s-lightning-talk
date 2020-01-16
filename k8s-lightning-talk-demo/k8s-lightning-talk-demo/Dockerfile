@@ -3,12 +3,9 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["k8s-lightning-talk-demo/k8s-lightning-talk-demo.csproj", "k8s-lightning-talk-demo/"]
-RUN dotnet restore "k8s-lightning-talk-demo/k8s-lightning-talk-demo.csproj"
 COPY . .
 WORKDIR "/src/k8s-lightning-talk-demo"
 RUN dotnet build "k8s-lightning-talk-demo.csproj" -c Release -o /app/build
